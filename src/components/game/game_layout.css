@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: auto;
+    padding: 30px 0;
+}
+
+.userdata ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.quit {
+    width: 100px;
+    height: 40px;
+    border: 1px solid skyblue;
+    background-color: red;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out;
+    border-radius: 9px;
+}
+
+.quit:hover {
+    background-color: gray;
+}
