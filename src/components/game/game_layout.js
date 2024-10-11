@@ -6,14 +6,12 @@ import './game_layout.css';
 import { Player } from '../play area/play_area.js';  // Import as a utility class
 
 const Layout = () => {
-    const [player] = useState(new Player('John Doe')); // Create a Player instance
-    console.log(player.score);
+    const [player] = useState(new Player('Kingsley')); // Create a Player instance
+    console.log(player.score)
     return (
         <>
             <header className="userdata">
                 <ul>
-                    <li>Player: {player.name}</li>
-                    <li>Score: {player.score}</li>
                     <li>
                         <button className="quit">Quit</button>
                     </li>

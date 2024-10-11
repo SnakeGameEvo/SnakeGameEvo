@@ -62,6 +62,11 @@
     /* or any color for the snake body */
 }
 
+/* Player Data */
+.score-board {
+    display: flex;
+    justify-content: space-around;
+}
 
 @media screen and (max-width:830px) {
     .board {

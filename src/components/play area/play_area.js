@@ -109,6 +109,7 @@ class PlayArea extends Component {
         if (newHead.row < 0 || newHead.row >= this.state.row || newHead.col < 0 || newHead.col >= this.state.column) {
             alert('Game over! Snake hit the boundary.');
             clearInterval(this.movementInterval);
+            this.saveUserData(); // Save player data when the game is over
             return;
         }
 
@@ -151,6 +152,27 @@ class PlayArea extends Component {
     incrementScore = () => {
         this.setState(prevState => ({ score: prevState.score + 10 }));
     }
+
+    // Save user data to PHP (name and score)
+    saveUserData = () => {
+        const { name, score } = this.state;
+
+        // Sending a POST request to PHP backend
+        fetch('http://localhost/snake-game/backend/users/create.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, score }),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    };
 
     componentDidMount() {
         window.addEventListener('keydown', this.handleKeyPress);
@@ -202,8 +224,8 @@ class PlayArea extends Component {
                     </article>
                 </section>
                 <div className="score-board">
+                    <h1>Player: {this.props.player.name}</h1>
                     <h2>Score: {this.state.score}</h2>
-                    <p>Player: {this.props.player.name}</p>
                 </div>
             </>
         );
