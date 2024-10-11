@@ -34,15 +34,32 @@
     justify-content: center;
 }
 
+.is-food::before.remove {
+    display: none;
+}
+
 /* Snake */
 
 /* Snake Head */
 .is-head::before {
-    content: '▼';
+    content: '😎';
+    rotate: -90deg;
+    background-color: black;
     color: black;
-    font-size: 20px;
+    font-size: 32px;
     display: flex;
     justify-content: center;
+}
+
+.is-head.turn-head {
+    rotate: 90deg;
+}
+
+/* Snake body */
+
+.grid-item.is-body {
+    background-color: green;
+    /* or any color for the snake body */
 }
 
 
