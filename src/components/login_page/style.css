@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Arvo", serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: url("src/components/login_page/images/background.png") center center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    position: relative;
+}
+
+.login-box{
+    background: transparent;
+    width: 500px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: 2px solid #ed83f5;
+    position: absolute;
+}
+
+.login-box h1{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 8vh;
+}
+
+
+#username{
+    width: 470px;
+    margin-bottom: 25px;
+    font-size: 25px;
+    border-radius: 10px;
+    margin-top: 15px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+}
+
+#username::placeholder{
+    color: #fff;
+}
+
+#password{
+    width: 470px;
+    margin-bottom: 30px;
+    font-size: 25px;
+    border-radius: 10px;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    border: 2px solid #fff;
+}
+
+#password::placeholder{
+    color: #fff;
+}
+
+#remember_me{
+    margin-bottom: 40px;
+
+}
+
+.rem{
+    color: #fff;
+}
+
+
+.forgot_password{
+    margin-right: 10px;
+    color: #fff;
+}
+
+.input3_forgotpwd{
+    justify-content: space-between;
+    display: flex;
+}
+
+.submitbtn{
+    margin-right: 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    cursor: pointer;
+    width: 490px;
+    height: 70px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+    font-size: 3vh;
+    color: #fff;
+}
+
+.submitbtn:hover{
+    background: rgba(10, 18, 110, 0.488);
+}
+
+
+a:hover{
+    color: #f9f871;
+}
+
+
+.signup{
+    margin-left: 200px;
+    color: #fff;
+}
+
+span{
+    color: rgb(93, 242, 44);
+}
+
+
+i{
+    color: #fff;
+}
+
+
+
+@media (max-width: 480px) {
+    .login-box {
+        width: 90%;
+        padding: 10px;
+        height: auto;
+    }
+
+    #username, #password {
+        font-size: 18px; 
+        width: 390px;
+    }
+
+    .rem, .forgot_password {
+        font-size: 12px;
+    }
+
+    .submitbtn {
+        padding: 10px;
+        font-size: 14px;
+        width: 400px;
+    }
+
+    .signup {
+        font-size: 12px;
+    }
+
+    span {
+        font-size: 12px;
+    }
+
+    i {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 456px) {
+    .login-box {
+        width: 90%;
+        padding: 10px;
+        height: auto;
+    }
+
+    #username, #password {
+        font-size: 18px; 
+        width: 300px;
+    }
+
+    .rem, .forgot_password {
+        font-size: 12px;
+    }
+
+    .submitbtn {
+        padding: 10px;
+        font-size: 14px;
+        width: 310px;
+    }
+
+    .signup {
+        font-size: 12px;
+        margin-left: 250px;
+    }
+
+    span {
+        font-size: 12px;
+    }
+
+    i {
+        font-size: 12px;
+    }
+}
+
+
+
+@media (max-height: 412px) {
+    .login-box {
+        width: 50%;
+        padding: 10px;
+        height: auto;
+    }
+
+    #username, #password {
+        font-size: 18px; 
+        width: 225px;
+    }
+
+    .rem, .forgot_password {
+        font-size: 12px;
+    }
+
+    .submitbtn {
+        padding: 10px;
+        font-size: 14px;
+        width: 250px;
+        margin-bottom: 0;
+    }
+
+    .signup {
+        font-size: 12px;
+        margin-left: 200px;
+        margin-bottom: 0;
+    }
+
+    span {
+        font-size: 12px;
+    }
+
+    i {
+        font-size: 12px;
+    }
+}
+
+
